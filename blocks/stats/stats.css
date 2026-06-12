@@ -1,0 +1,71 @@
+/* Full-width stats bar */
+.stats-container .stats-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.stats > dl {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0;
+  padding: 0;
+}
+
+.stats-item {
+  background-color: var(--nfl-blue);
+  color: #fff;
+  text-align: center;
+  padding: 32px 16px;
+  border-right: 1px solid rgb(255 255 255 / 10%);
+  border-bottom: 1px solid rgb(255 255 255 / 10%);
+}
+
+.stats-item:last-child {
+  border-right: none;
+}
+
+.stats-value {
+  display: block;
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-xxl);
+  font-weight: 700;
+  color: var(--nfl-gold);
+  line-height: 1;
+  margin-bottom: 0.2em;
+}
+
+.stats-label {
+  display: block;
+  font-size: var(--body-font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  color: rgb(255 255 255 / 90%);
+  margin: 0;
+}
+
+.stats-desc {
+  font-size: 12px;
+  color: rgb(255 255 255 / 55%);
+  margin: 6px 0 0;
+}
+
+@media (width >= 600px) {
+  .stats > dl {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .stats-item {
+    border-bottom: none;
+  }
+}
+
+@media (width >= 900px) {
+  .stats-item {
+    padding: 40px 24px;
+  }
+
+  .stats-value {
+    font-size: var(--heading-font-size-xxl);
+  }
+}

@@ -1,0 +1,115 @@
+.article-list > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.article-list > ul > li {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0;
+  border-bottom: 1px solid #dde3ea;
+  gap: 16px;
+}
+
+.article-list > ul > li:first-child {
+  padding-top: 0;
+}
+
+.article-list > ul > li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* Image cell */
+.article-list .article-list-image {
+  line-height: 0;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.article-list .article-list-image img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.article-list > ul > li:hover .article-list-image img {
+  transform: scale(1.03);
+}
+
+/* Body cell */
+.article-list .article-list-body > *:first-child {
+  margin-top: 0;
+}
+
+.article-list .article-list-body h3,
+.article-list .article-list-body h2 {
+  margin-top: 0.4em;
+  margin-bottom: 0.3em;
+  color: var(--nfl-blue);
+  font-size: var(--heading-font-size-s);
+}
+
+.article-list .article-list-body h3 a,
+.article-list .article-list-body h2 a {
+  color: var(--nfl-blue);
+  text-decoration: none;
+}
+
+.article-list .article-list-body h3 a:hover,
+.article-list .article-list-body h2 a:hover {
+  color: var(--nfl-red);
+  text-decoration: underline;
+}
+
+.article-list .article-list-body p {
+  font-size: var(--body-font-size-s);
+  color: var(--dark-color);
+  margin: 0 0 0.5em;
+}
+
+/* First paragraph styled as category/date meta */
+.article-list .article-list-body p:first-child {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--nfl-red);
+  margin-bottom: 0;
+}
+
+.article-list .article-list-body a.button {
+  margin-top: 8px;
+}
+
+@media (width >= 600px) {
+  .article-list > ul > li {
+    flex-direction: row;
+    gap: 24px;
+    align-items: flex-start;
+  }
+
+  .article-list .article-list-image {
+    width: 260px;
+  }
+
+  .article-list .article-list-image img {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+@media (width >= 900px) {
+  .article-list .article-list-image {
+    width: 300px;
+  }
+
+  .article-list > ul > li {
+    gap: 32px;
+  }
+}

@@ -1,0 +1,53 @@
+.photo-showcase-container .photo-showcase-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.photo-showcase {
+  position: relative;
+  overflow: hidden;
+}
+
+.photo-showcase-inner {
+  position: relative;
+}
+
+.photo-showcase-inner > picture {
+  display: block;
+}
+
+.photo-showcase-inner img {
+  width: 100%;
+  display: block;
+}
+
+.photo-showcase-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 60px 32px 40px;
+  background: linear-gradient(to top, rgb(0 0 0 / 85%) 0%, transparent 100%);
+}
+
+.photo-showcase-overlay-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.photo-showcase h3 {
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #fff;
+  margin: 0 0 8px;
+}
+
+.photo-showcase p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgb(255 255 255 / 70%);
+  max-width: 480px;
+  margin: 0;
+}

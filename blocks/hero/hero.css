@@ -4,34 +4,94 @@
 }
 
 .hero {
-  position: relative;
-  padding: 40px 24px;
-  min-height: 300px;
+  background: var(--nfl-blue);
+  color: var(--nfl-white);
+  padding: 80px 24px;
+  text-align: center;
 }
 
 .hero h1 {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--background-color);
+  color: var(--nfl-white);
+  font-size: 3.5rem;
+  margin-bottom: 16px;
 }
 
-.hero picture {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  object-fit: cover;
-  box-sizing: border-box;
+.hero p {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero em {
+  font-style: normal;
 }
 
 .hero img {
-  object-fit: cover;
+  max-width: 120px;
+  height: auto;
+  margin-bottom: 24px;
+  filter: drop-shadow(0 4px 24px rgb(0 0 0 / 30%));
+}
+
+/* Background video hero variant */
+.hero.hero-with-video {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero .hero-bg-video {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.4;
+}
+
+.hero.hero-with-video > div {
+  position: relative;
+  z-index: 1;
+}
+
+/* Background image hero variant */
+.hero.hero-with-image {
+  position: relative;
+  overflow: hidden;
+  min-height: 500px;
+}
+
+.hero .hero-bg-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero .hero-bg-image picture,
+.hero .hero-bg-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0.35;
+}
+
+.hero.hero-with-image > div {
+  position: relative;
+  z-index: 1;
 }
 
 @media (width >= 900px) {
   .hero {
-    padding: 40px 32px;
+    padding: 100px 32px;
+  }
+
+  .hero img {
+    max-width: 160px;
+  }
+
+  .hero.hero-with-image {
+    min-height: 600px;
   }
 }

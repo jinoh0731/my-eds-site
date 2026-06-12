@@ -1,0 +1,53 @@
+.media-placeholder {
+  max-width: 700px;
+  margin: 16px auto;
+}
+
+/* Static placeholder card */
+.media-placeholder-card {
+  background-color: rgb(255 255 255 / 6%);
+  border: 1px solid rgb(255 255 255 / 10%);
+  border-radius: 16px;
+  padding: 56px 32px;
+  text-align: center;
+}
+
+.media-placeholder-card p {
+  color: rgb(255 255 255 / 50%);
+  font-size: var(--body-font-size-xs);
+  margin: 0.3em 0;
+}
+
+.media-placeholder-card p:first-child {
+  color: rgb(255 255 255 / 80%);
+  font-family: var(--heading-font-family);
+  font-weight: 700;
+  font-size: var(--heading-font-size-m);
+}
+
+/* 3D model viewer */
+.media-placeholder-3d {
+  border-radius: 16px;
+  overflow: hidden;
+  width: 100%;
+  height: 450px;
+  position: relative;
+}
+
+.media-placeholder-3d canvas {
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+@media (width >= 900px) {
+  .media-placeholder-card {
+    padding: 64px 48px;
+  }
+
+  .media-placeholder-3d {
+    height: 550px;
+  }
+}

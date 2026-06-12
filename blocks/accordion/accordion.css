@@ -1,0 +1,31 @@
+.accordion > div {
+  border-bottom: 1px solid var(--nfl-grey-3);
+}
+
+.accordion .accordion-heading {
+  padding: 16px 40px 16px 0;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--nfl-blue);
+  position: relative;
+  user-select: none;
+}
+
+.accordion .accordion-heading::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: var(--nfl-red);
+}
+
+.accordion > div.active .accordion-heading::after {
+  content: '\2212';
+}
+
+.accordion .accordion-body {
+  padding: 0 0 16px;
+  color: var(--nfl-grey-1);
+}

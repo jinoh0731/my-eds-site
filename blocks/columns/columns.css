@@ -1,33 +1,79 @@
 .columns > div {
   display: flex;
   flex-direction: column;
+  gap: 32px;
+}
+
+.columns > div > div {
+  flex: 1;
+  min-width: 250px;
 }
 
 .columns img {
   width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform var(--transition-smooth), filter var(--transition-smooth);
 }
 
-.columns > div > div {
-  order: 1;
-}
-
-.columns > div > .columns-img-col {
-  order: 0;
-}
-
-.columns > div > .columns-img-col img {
+.columns .columns-img-col picture {
   display: block;
 }
 
-@media (width >= 900px) {
-  .columns > div {
-    align-items: center;
-    flex-direction: unset;
-    gap: 24px;
-  }
+.columns .columns-img-col img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
 
-  .columns > div > div {
-    flex: 1;
-    order: unset;
+.columns .columns-img-col:hover img {
+  transform: scale(1.02);
+  filter: brightness(0.95);
+}
+
+.columns h3 {
+  color: var(--nfl-red);
+}
+
+/* Dark variant */
+.columns.dark {
+  background: rgb(0 0 0 / 20%);
+  color: rgb(255 255 255 / 85%);
+  padding: 40px 24px;
+  border-radius: 12px;
+  border: 1px solid rgb(255 255 255 / 8%);
+}
+
+.columns.dark h2,
+.columns.dark h3 {
+  color: #fff;
+}
+
+.columns.dark h3 {
+  color: var(--nfl-gold);
+}
+
+.columns.dark p {
+  color: rgb(255 255 255 / 75%);
+}
+
+.columns.dark a:any-link {
+  color: var(--nfl-blue-3);
+}
+
+.columns.dark a:hover {
+  color: #fff;
+}
+
+@media (width >= 600px) {
+  .columns > div {
+    flex-direction: row;
+  }
+}
+
+@media (width >= 900px) {
+  .columns.dark {
+    padding: 48px 32px;
   }
 }

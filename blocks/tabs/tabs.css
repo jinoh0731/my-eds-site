@@ -1,0 +1,64 @@
+.tabs-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  border-bottom: 3px solid var(--nfl-blue);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.tabs-list::-webkit-scrollbar {
+  display: none;
+}
+
+.tabs-tab {
+  padding: 12px 18px;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -3px;
+  font-family: var(--heading-font-family);
+  font-size: var(--body-font-size-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--dark-color);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.tabs-tab:hover {
+  color: var(--nfl-blue);
+  background-color: rgb(1 51 105 / 5%);
+}
+
+.tabs-tab[aria-selected='true'] {
+  color: var(--nfl-blue);
+  border-bottom-color: var(--nfl-red);
+  background-color: rgb(1 51 105 / 4%);
+}
+
+.tabs-tab:focus-visible {
+  outline: 2px solid var(--nfl-blue);
+  outline-offset: -2px;
+}
+
+.tabs-panel[hidden] {
+  display: none;
+}
+
+.tabs-panels {
+  padding: 24px 0;
+}
+
+.tabs-panel > *:first-child {
+  margin-top: 0;
+}
+
+@media (width >= 900px) {
+  .tabs-tab {
+    padding: 14px 24px;
+    font-size: var(--body-font-size-s);
+  }
+}

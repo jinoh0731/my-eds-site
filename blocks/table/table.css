@@ -1,0 +1,28 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table > div {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.table > div:first-child {
+  background: var(--nfl-blue);
+  color: var(--nfl-white);
+  font-weight: 700;
+}
+
+.table > div:first-child > div {
+  padding: 12px 16px;
+}
+
+.table > div:not(:first-child) > div {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--nfl-grey-3);
+}
+
+.table > div:not(:first-child):hover {
+  background: #f4f6f8;
+}

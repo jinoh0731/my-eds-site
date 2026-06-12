@@ -151,6 +151,17 @@ export default async function decorate(block) {
     });
   }
 
+  // mark active page link
+  const currentPath = window.location.pathname;
+  if (navSections) {
+    navSections.querySelectorAll('a').forEach((a) => {
+      const href = new URL(a.href, window.location).pathname;
+      if (href === currentPath || (currentPath === '/' && href === '/')) {
+        a.setAttribute('aria-current', 'page');
+      }
+    });
+  }
+
   // hamburger for mobile
   const hamburger = document.createElement('div');
   hamburger.classList.add('nav-hamburger');

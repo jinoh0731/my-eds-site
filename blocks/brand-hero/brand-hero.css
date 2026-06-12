@@ -1,0 +1,54 @@
+/* Full-width brand hero */
+.brand-hero-container .brand-hero-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.brand-hero {
+  padding: 60px 24px 40px;
+}
+
+.brand-hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.brand-hero h1 {
+  font-family: var(--heading-font-family);
+  font-weight: 900;
+  font-size: 52px;
+  line-height: 0.95;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  margin: 0;
+  color: #fff;
+}
+
+.brand-hero h1 em {
+  display: block;
+  font-style: normal;
+  color: var(--nfl-impact-blue);
+}
+
+.brand-hero p {
+  color: rgb(255 255 255 / 70%);
+  font-size: var(--body-font-size-s);
+  max-width: 560px;
+  margin-top: 1em;
+}
+
+@media (width >= 600px) {
+  .brand-hero h1 {
+    font-size: 72px;
+  }
+}
+
+@media (width >= 900px) {
+  .brand-hero {
+    padding: 100px 32px 48px;
+  }
+
+  .brand-hero h1 {
+    font-size: 96px;
+  }
+}
